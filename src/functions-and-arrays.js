@@ -55,16 +55,23 @@ function findLongestWord(arrayToLook) {
 
 
 
+
 // Iteration 3 | Sum Numbers
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
 function sumNumbers(arrayEsperado) {
-    if(arrayEsperado.length ==){
 
+    //returns the sums of all the numbers of the array
+
+    let suma = 0;
+
+    if(arrayEsperado.length === 0 ){
+        return suma
     } else {
-        for(){
-
+        for(let i = 0; i <arrayEsperado.length; i++ ){
+            suma += arrayEsperado[i]
         }
+        return suma
     }
     
 
@@ -76,7 +83,16 @@ function sumNumbers(arrayEsperado) {
 // Iteration 4 | Numbers Average
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(arrayDeNumeros) {
+    //tenemos que hacer un caso especial para el array vacio porque no reconoce 0/0 un numero
+    if(arrayDeNumeros.length === 0){
+        return 0
+    } 
+    let suma = sumNumbers(arrayDeNumeros);
+    let media = suma / arrayDeNumeros.length
+    
+    return media
+}
 
 
 
@@ -84,4 +100,14 @@ function averageNumbers() {}
 // Iteration 5 | Find Elements
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
-function doesWordExist() {}
+function doesWordExist(arrayOfWords, wordToSearch) {
+    if(arrayOfWords.length === 0){
+        return null
+    } else {
+        for(let i = 0; i < arrayOfWords.length; i++){
+            if(arrayOfWords[i] === wordToSearch){
+                return true
+            }
+        }
+    } return false
+}
